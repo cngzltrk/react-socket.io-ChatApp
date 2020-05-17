@@ -3,6 +3,7 @@
 Simple Chat app
 
 Project run 
+
 	-npm install //in mychatapp for react 
 	-npm install // in server for node js
 	
