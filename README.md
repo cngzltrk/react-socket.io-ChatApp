@@ -20,7 +20,7 @@ Project run
 
 	
   
-  ![App.gif](https://github.com/cngzltrk/Sales-Stock/blob/master/Gif/satisStokProject.gif)
+  ![App.gif](https://github.com/cngzltrk/react-socket.io-ChatApp/blob/master/gif/app.gif)
   
   
   
