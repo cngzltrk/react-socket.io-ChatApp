@@ -3,20 +3,26 @@
 Simple Chat app
 
 Project run 
+
 	-npm install //in mychatapp for react 
 	-npm install // in server for node js
 	
 	-npm start // for react 
-	-node ./server.js //for node.js
+	-npm start //for node.js
  
 ## Front END
   - React 
   - CSS
+  - Reactstrap
   
 ## Back end
   - Node.js
 
-### Socket.io 
+#### Library
+
+	- Socket.io
+	- Reactstrap
+	- Nodemon //for nodejs rerunning when file change 
 
 	
   

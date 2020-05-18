@@ -20,10 +20,18 @@ const port = process.env.PORT || 5555;
 channel.on("connection", socket => {
     console.log(`${Date(Date.now()).toLocaleString()}: yeni bir istemci bağlandı`);
     
+    socket.emit('server',"hi from server");
+    socket.on("room:create",(data)=>{
+        console.log(data);
+        socket.join(data);
+        //socket.broadcast.to('room1').emit('server:room1',"hello from room1");
+    });
+
+
     socket.on("client:message",(data)=>{
         console.log(data);
 
-        socket.broadcast.emit('server:message',(data));
+        socket.to(data.roomname).emit('server:message',(data));
 
     });
 

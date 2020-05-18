@@ -17,16 +17,23 @@ import '../styles/ChatApp.css'
         this.addMessage=this.addMessage.bind(this);
 
         this.socket = io(this.state.endpoint,{ query: `username=${props.username}` }).connect();
-       
+        
         this.socket.on('server:message', (message) =>{
             this.addMessage(message);
             });
-     
+        this.socket.emit('room:create',props.roomname);
+        this.socket.on('server',(data)=>{
+            console.log(data);
+        });
+        this.socket.on('server:room1',(data)=>{
+            console.log(data);
+        });
     }
     
     sendHandler(message){
         const messageObject = {
             username: this.props.username,
+            roomname: this.props.roomname,
             message
           };
           // Emit the message to the server
